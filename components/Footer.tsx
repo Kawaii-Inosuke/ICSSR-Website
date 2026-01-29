@@ -30,7 +30,6 @@ export const Footer: React.FC = () => {
               <li><NavLink to="/project" className="hover:text-white transition-colors">The Project</NavLink></li>
               <li><NavLink to="/research" className="hover:text-white transition-colors">Research & Impact</NavLink></li>
               <li><NavLink to="/people" className="hover:text-white transition-colors">People</NavLink></li>
-              <li><NavLink to="/news" className="hover:text-white transition-colors">News & Events</NavLink></li>
               <li><NavLink to="/opportunities" className="hover:text-white transition-colors">Opportunities</NavLink></li>
             </ul>
           </div>

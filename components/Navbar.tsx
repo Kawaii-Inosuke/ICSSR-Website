@@ -11,7 +11,6 @@ export const Navbar: React.FC = () => {
     { name: 'The Project', path: '/project' },
     { name: 'Research & Impact', path: '/research' },
     { name: 'People', path: '/people' },
-    { name: 'News & Events', path: '/news' },
     { name: 'Opportunities', path: '/opportunities' },
   ];
 
@@ -49,9 +48,12 @@ export const Navbar: React.FC = () => {
                 {item.name}
               </NavLink>
             ))}
-            <button className="text-navy-900 text-sm font-medium hover:text-bronze-600 transition flex items-center gap-1 border border-navy-900 px-4 py-2 rounded hover:bg-navy-900 hover:text-white">
+            <NavLink
+              to="/contact"
+              className="text-navy-900 text-sm font-medium hover:text-bronze-600 transition flex items-center gap-1 border border-navy-900 px-4 py-2 rounded hover:bg-navy-900 hover:text-white"
+            >
               Contact
-            </button>
+            </NavLink>
           </div>
 
           {/* Mobile menu button */}
