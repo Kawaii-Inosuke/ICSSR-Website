@@ -7,11 +7,11 @@ interface SectionHeadingProps {
   light?: boolean;
 }
 
-export const SectionHeading: React.FC<SectionHeadingProps> = ({ 
-  title, 
-  subtitle, 
+export const SectionHeading: React.FC<SectionHeadingProps> = ({
+  title,
+  subtitle,
   centered = false,
-  light = false 
+  light = false
 }) => {
   return (
     <div className={`mb-10 ${centered ? 'text-center' : 'text-left'}`}>
@@ -19,7 +19,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         {title}
       </h2>
       {subtitle && (
-        <p className={`text-lg font-sans leading-relaxed max-w-3xl mx-auto ${light ? 'text-cream-200' : 'text-gray-600'}`}>
+        <p className={`text-lg font-sans leading-relaxed max-w-3xl ${centered ? 'mx-auto' : ''} ${light ? 'text-cream-200' : 'text-gray-600'}`}>
           {subtitle}
         </p>
       )}

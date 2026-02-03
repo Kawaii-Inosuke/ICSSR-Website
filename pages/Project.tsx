@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionHeading } from '../components/SectionHeading';
+import vendigImg from '../assets/vendig.svg';
 
 export const Project: React.FC = () => {
   return (
@@ -60,6 +61,13 @@ export const Project: React.FC = () => {
                 Evaluating whether government agencies have established meaningful oversight protocols, audit mechanisms, grievance redressal systems, and adaptive learning processes to ensure ethical AI deployment.
               </p>
             </div>
+          </div>
+
+
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-8 mt-16">Ethical AI in E-Governance Framework</h2>
+
+          <div className="flex justify-center">
+            <img src={vendigImg} alt="Ethical AI in E-Governance Framework" className="w-full max-w-xl h-auto" />
           </div>
         </div>
       </div>
