@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Contact: React.FC = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSendMessage = () => {
+        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=icssr2026srmist@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.open(gmailLink, '_blank');
+
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+    };
+
     return (
         <div className="bg-white min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -22,6 +39,8 @@ export const Contact: React.FC = () => {
                                 <label className="block text-navy-900 font-serif font-bold mb-2">Name</label>
                                 <input
                                     type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-bronze-500"
                                 />
                             </div>
@@ -29,6 +48,8 @@ export const Contact: React.FC = () => {
                                 <label className="block text-navy-900 font-serif font-bold mb-2">Email</label>
                                 <input
                                     type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-bronze-500"
                                 />
                             </div>
@@ -36,6 +57,8 @@ export const Contact: React.FC = () => {
                                 <label className="block text-navy-900 font-serif font-bold mb-2">Subject</label>
                                 <input
                                     type="text"
+                                    value={subject}
+                                    onChange={(e) => setSubject(e.target.value)}
                                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-bronze-500"
                                 />
                             </div>
@@ -43,11 +66,14 @@ export const Contact: React.FC = () => {
                                 <label className="block text-navy-900 font-serif font-bold mb-2">Message</label>
                                 <textarea
                                     rows={5}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                     className="w-full p-3 border border-gray-300 focus:outline-none focus:border-bronze-500 resize-none"
                                 ></textarea>
                             </div>
                             <button
-                                type="submit"
+                                type="button"
+                                onClick={handleSendMessage}
                                 className="bg-navy-900 text-white font-bold py-3 px-6 text-sm hover:bg-navy-800 transition"
                             >
                                 Send Message
