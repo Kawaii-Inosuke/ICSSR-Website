@@ -79,7 +79,7 @@ export const People: React.FC = () => {
       id: 'co-5',
       name: 'Edward Prathap Singh. K',
       role: 'Co-PI',
-      institution: 'SRM Institute of Science & Technology',
+      institution: 'Master of Social Work, SRM Institute of Science & Technology',
       imageUrl: '/assets/PI and CO Pi/edward.jpg'
     }
   ];
