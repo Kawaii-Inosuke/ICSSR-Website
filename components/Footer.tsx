@@ -29,6 +29,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4 text-base text-gray-300 font-sans">
               <li><NavLink to="/project" className="hover:text-white transition-colors">The Project</NavLink></li>
               <li><NavLink to="/research" className="hover:text-white transition-colors">Research & Impact</NavLink></li>
+              <li><NavLink to="/events" className="hover:text-white transition-colors">Events</NavLink></li>
               <li><NavLink to="/people" className="hover:text-white transition-colors">People</NavLink></li>
               <li><NavLink to="/opportunities" className="hover:text-white transition-colors">Opportunities</NavLink></li>
             </ul>

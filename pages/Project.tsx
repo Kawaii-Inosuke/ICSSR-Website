@@ -20,14 +20,14 @@ export const Project: React.FC = () => {
               Research Scope
             </h2>
             <p className="text-lg font-sans leading-relaxed max-w-3xl text-gray-600">
-              A two years ICSSR longitudinal study examining trust, fairness, and accountability in AI-enabled e-governance systems across diverse Indian regions.
+              A two years ICSSR longitudinal study examining trust, fairness, and accountability in 'AI-enabled' e-governance systems across diverse Indian regions.
             </p>
             <div className="h-1 w-20 bg-bronze-500 mt-4"></div>
           </div>
 
           <div className="prose prose-lg text-gray-700 font-sans mb-16 text-justify mt-4">
             <p className="leading-relaxed">
-              This research investigates the ethical dimensions of Artificial Intelligence deployment in public service delivery across Tamil Nadu and Haryana-Chandigarh. Through a mixed-methods approach combining technical AI system audits, annual citizen surveys tracking 2,200+ respondents, focus group discussions, and stakeholder interviews, the study evaluates how AI systems used in welfare distribution, healthcare triaging, and predictive policing impact public trust, algorithmic fairness, and institutional accountability. By bridging computer science methodologies with social science research, the project will develop the Ethical AI Maturity Index (EAMI), ethics dashboards, audit templates, and the Responsible AI for Governance Framework (RAIGF) to ensure AI in Indian governance is transparent, inclusive, and citizen-centric—aligned with the Viksit Bharat@2047 vision.
+              This research investigates the ethical dimensions of Artificial Intelligence deployment in public service delivery across Tamil Nadu and Haryana-Chandigarh. Through a mixed-methods approach combining technical AI system audits, annual citizen surveys tracking 2,200+ respondents, focus group discussions, and stakeholder interviews, the study evaluates how AI systems used in welfare distribution, healthcare triaging, and predictive policing impact public trust, algorithmic fairness, and institutional accountability. By bridging computer science methodologies with social science research, the project will develop the Ethical AI Maturity Index (EAMI), ethics dashboards, audit templates, and the Responsible AI for Governance Framework (RAIGF) to ensure AI in Indian governance is transparent, inclusive, and citizen-centric aligned with the Viksit Bharat@2047 vision.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export const Project: React.FC = () => {
                 <h3 className="font-bold text-navy-900 text-lg">Algorithmic Fairness and Bias:</h3>
               </div>
               <p className="text-gray-700 font-sans leading-relaxed">
-                Conducting technical audits using SHAP, LIME, and Fairlearn to identify disparities in AI decision-making across caste, gender, language, literacy, and urban-rural divides—with special focus on marginalized communities.
+                Conducting technical audits using SHAP, LIME, and Fairlearn to identify disparities in AI decision-making across caste, gender, language, literacy, and urban-rural divides with special focus on marginalized communities.
               </p>
             </div>
 

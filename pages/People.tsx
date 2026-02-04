@@ -9,7 +9,7 @@ export const People: React.FC = () => {
       id: '1',
       name: 'Dr. Divya Mohan',
       role: 'PI',
-      institution: 'SRM Institute of Science & Technology',
+      institution: 'Department of Computing Technologies, SRM Institute of Science & Technology',
       bio: 'Assistant Professor of Computer Science and Principal Investigator leading research in AI Ethics and Algorithmic Fairness. Drives strategic project management to ensure technical innovation and excellence.',
       imageUrl: '/assets/PI and CO Pi/dr divya mohan.jpg'
     },
@@ -22,6 +22,13 @@ export const People: React.FC = () => {
       role: 'Research Assistant',
       institution: 'SRM Institute of Science & Technology',
       imageUrl: '/assets/research ass and field/Rishiraj Sen.jpg'
+    },
+    {
+      id: '6',
+      name: 'Sharmista Sen Gupta',
+      role: 'Field Investigator',
+      institution: 'SRM Institute of Science & Technology',
+      imageUrl: '/assets/research ass and field/Sharmista Sen Gupta.jpeg'
     },
     {
       id: '4',
@@ -44,28 +51,28 @@ export const People: React.FC = () => {
       id: 'co-1',
       name: 'Dr. Papia Sen Gupta',
       role: 'Co-PI',
-      institution: 'JNU University',
+      institution: 'Centre for Political Studies, School of Social Sciences, JNU',
       imageUrl: '/assets/PI and CO Pi/papia sen gupta.jpg'
     },
     {
       id: 'co-2',
       name: 'Dr. Neela Ganguly',
       role: 'Co-PI',
-      institution: 'Guru Nanak College',
+      institution: 'Head of the Department, Guru Nanak College',
       imageUrl: '/assets/PI and CO Pi/dr neela ganguly.jpg'
     },
     {
       id: 'co-3',
       name: 'Dr. Mathew Arumai M',
       role: 'Co-PI',
-      institution: 'SRM Institute of Science & Technology',
+      institution: 'Department of Social Work, SRM Institute of Science & Technology',
       imageUrl: '/assets/PI and CO Pi/mathew.jpg'
     },
     {
       id: 'co-4',
       name: 'Dr. P.Selvaraj',
       role: 'Co-PI',
-      institution: 'SRM Institute of Science & Technology',
+      institution: 'Department of Computing Technologies, SRM Institute of Science & Technology',
       imageUrl: '/assets/PI and CO Pi/dr selvaraj p.jpg'
     },
     {

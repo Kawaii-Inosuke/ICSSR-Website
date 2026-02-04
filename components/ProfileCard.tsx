@@ -17,11 +17,11 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ member, featured = fal
   return (
     <div className={`flex flex-col ${isHorizontal ? 'md:flex-row bg-white border border-gray-200 shadow-sm' : 'bg-transparent'}`}>
       {/* Image Container */}
-      <div className={`${isHorizontal ? (isLarge ? 'md:w-2/5' : 'md:w-2/5') : 'w-full mb-4'} relative overflow-hidden group`}>
+      <div className={`${isHorizontal ? (isLarge ? 'md:w-2/5' : 'md:w-1/3') : 'w-full mb-4'} relative overflow-hidden group`}>
         <img
           src={member.imageUrl || "https://picsum.photos/400/500"}
           alt={member.name}
-          className={`w-full h-full object-cover ${isHorizontal ? (isLarge ? 'min-h-[350px]' : 'h-full min-h-[300px]') : 'aspect-[3/4] rounded-sm'}`}
+          className={`w-full h-full object-cover ${isHorizontal ? (isLarge ? 'min-h-[350px]' : 'h-full min-h-[250px]') : 'aspect-[3/4] rounded-sm'}`}
         />
         {!isHorizontal && (
           <div className="absolute bottom-0 left-0 w-full h-1 bg-bronze-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
