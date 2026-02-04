@@ -42,31 +42,31 @@ export const People: React.FC = () => {
   const coLeadership: TeamMember[] = [
     {
       id: 'co-1',
-      name: 'Dr. Neela Ganguly',
-      role: 'Co-PI',
-      institution: 'Guru Nanak College',
-      imageUrl: '/assets/PI and CO Pi/dr neela ganguly.jpg'
-    },
-    {
-      id: 'co-2',
-      name: 'Dr. P.Selvaraj',
-      role: 'Co-PI',
-      institution: 'SRM Institute of Science & Technology',
-      imageUrl: '/assets/PI and CO Pi/dr selvaraj p.jpg'
-    },
-    {
-      id: 'co-3',
       name: 'Dr. Papia Sen Gupta',
       role: 'Co-PI',
       institution: 'JNU University',
       imageUrl: '/assets/PI and CO Pi/papia sen gupta.jpg'
     },
     {
-      id: 'co-4',
+      id: 'co-2',
+      name: 'Dr. Neela Ganguly',
+      role: 'Co-PI',
+      institution: 'Guru Nanak College',
+      imageUrl: '/assets/PI and CO Pi/dr neela ganguly.jpg'
+    },
+    {
+      id: 'co-3',
       name: 'Dr. Mathew Arumai M',
       role: 'Co-PI',
       institution: 'SRM Institute of Science & Technology',
       imageUrl: '/assets/PI and CO Pi/mathew.jpg'
+    },
+    {
+      id: 'co-4',
+      name: 'Dr. P.Selvaraj',
+      role: 'Co-PI',
+      institution: 'SRM Institute of Science & Technology',
+      imageUrl: '/assets/PI and CO Pi/dr selvaraj p.jpg'
     },
     {
       id: 'co-5',
