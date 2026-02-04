@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-4">
                 <Mail size={24} className="text-[#C19A6B] shrink-0" />
-                <a href="mailto:icssr2025srmist@gmail.com" className="hover:text-white transition-colors">icssr2026srmist@gmail.com</a>
+                <a href="mailto:icssr2026srmist@gmail.com" className="hover:text-white transition-colors">icssr2026srmist@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="border-t border-[#C19A6B] pt-8 mt-8">
           <p className="text-sm text-gray-400 font-sans text-center">
-            © 2025 ICSSR SRMIST, All Rights Reserved.
+            © 2026 ICSSR SRMIST, All Rights Reserved.
           </p>
         </div>
       </div>
