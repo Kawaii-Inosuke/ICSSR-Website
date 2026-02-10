@@ -32,6 +32,7 @@ export const Footer: React.FC = () => {
               <li><NavLink to="/events" className="hover:text-white transition-colors">Events</NavLink></li>
               <li><NavLink to="/people" className="hover:text-white transition-colors">People</NavLink></li>
               <li><NavLink to="/opportunities" className="hover:text-white transition-colors">Opportunities</NavLink></li>
+              <li><NavLink to="/gallery" className="hover:text-white transition-colors">Gallery</NavLink></li>
             </ul>
           </div>
 

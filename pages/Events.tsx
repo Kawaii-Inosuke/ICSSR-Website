@@ -22,8 +22,11 @@ interface Event {
 
 export const Events: React.FC = () => {
     const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+    const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
-    const upcomingEvents: Event[] = [
+    const upcomingEvents: Event[] = [];
+
+    const pastEvents: Event[] = [
         {
             id: '1',
             title: 'National Workshop On Ethics of AI in E-Governance: Trust, Fairness and Accountability Over Time',
@@ -47,11 +50,9 @@ export const Events: React.FC = () => {
                 '/assets/events/brochure/brochure1.jpeg',
                 '/assets/events/brochure/brochure2.jpeg'
             ],
-            status: 'upcoming'
+            status: 'past'
         }
     ];
-
-    const pastEvents: Event[] = [];
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -72,6 +73,129 @@ export const Events: React.FC = () => {
                         alt="Brochure Full View"
                         className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
                     />
+                </div>
+            )}
+
+            {/* Event Details Modal */}
+            {selectedEvent && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 backdrop-blur-sm"
+                    onClick={() => setSelectedEvent(null)}
+                >
+                    <div
+                        className="bg-white rounded-xl shadow-2xl w-full max-w-6xl max-h-[85vh] overflow-y-auto"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Modal Header */}
+                        <div className="bg-navy-900 p-6 lg:p-8 sticky top-0 z-10 flex justify-between items-start">
+                            <div className="pr-8">
+                                <div className="inline-flex items-center gap-2 bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                                    <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                                    Completed
+                                </div>
+                                <h3 className="text-2xl lg:text-3xl font-serif font-bold text-white leading-tight">
+                                    {selectedEvent.title}
+                                </h3>
+                            </div>
+                            <button
+                                onClick={() => setSelectedEvent(null)}
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                <X size={28} />
+                            </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                            {/* Event Details - 3 columns */}
+                            <div className="lg:col-span-3 p-8 lg:p-10">
+                                {/* Quick Info */}
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                                    <div className="flex items-center gap-3 text-gray-700">
+                                        <Calendar size={20} className="text-bronze-500" />
+                                        <div>
+                                            <p className="text-xs text-gray-500 uppercase tracking-wide">Date</p>
+                                            <p className="font-semibold">{selectedEvent.dateRange}</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-3 text-gray-700">
+                                        <MapPin size={20} className="text-bronze-500" />
+                                        <div>
+                                            <p className="text-xs text-gray-500 uppercase tracking-wide">Venue</p>
+                                            <p className="font-semibold text-sm">{selectedEvent.location}</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-3 text-gray-700">
+                                        <Users size={20} className="text-bronze-500" />
+                                        <div>
+                                            <p className="text-xs text-gray-500 uppercase tracking-wide">Sponsor</p>
+                                            <p className="font-semibold">{selectedEvent.sponsor}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Description */}
+                                <div className="mb-8">
+                                    <h4 className="text-lg font-serif font-bold text-navy-900 mb-4">About the Workshop</h4>
+                                    <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
+                                        {selectedEvent.description.map((para, index) => (
+                                            <p key={index}>{para}</p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Target Audience */}
+                                <div className="mb-8 p-4 bg-bronze-50 rounded-lg border-l-4 border-bronze-500">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <Target size={18} className="text-bronze-600" />
+                                        <h4 className="font-bold text-navy-900">Target Audience</h4>
+                                    </div>
+                                    <p className="text-gray-700">{selectedEvent.targetAudience}</p>
+                                </div>
+
+                                {/* Resource Persons */}
+                                <div>
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <Mic size={18} className="text-bronze-500" />
+                                        <h4 className="text-lg font-serif font-bold text-navy-900">Resource Persons</h4>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        {selectedEvent.resourcePersons.map((person, index) => (
+                                            <div key={index} className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                                <p className="font-semibold text-navy-900">{person.name}</p>
+                                                <p className="text-sm text-gray-600 mt-1">{person.designation}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Brochure - 2 columns */}
+                            {selectedEvent.brochureUrls && selectedEvent.brochureUrls.length > 0 && (
+                                <div className="lg:col-span-2 bg-gray-100 p-6 lg:p-8 flex flex-col items-center justify-start border-l border-gray-200">
+                                    <h4 className="text-lg font-serif font-bold text-navy-900 mb-4 self-start">Event Brochure</h4>
+                                    <div className="flex flex-col gap-4 w-full">
+                                        {selectedEvent.brochureUrls.map((url, index) => (
+                                            <div key={index} className="relative group cursor-pointer" onClick={() => setFullscreenImage(url)}>
+                                                <img
+                                                    src={url}
+                                                    alt={`${selectedEvent.title} Brochure - Page ${index + 1}`}
+                                                    className="w-full h-auto rounded-lg shadow-md object-contain transition-transform group-hover:scale-[1.02]"
+                                                />
+                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors rounded-lg flex items-center justify-center">
+                                                    <span className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 px-4 py-2 rounded-full text-sm font-medium text-navy-900 shadow-lg">
+                                                        Click to view full screen
+                                                    </span>
+                                                </div>
+                                                <div className="absolute bottom-2 right-2 bg-navy-900/80 text-white text-xs px-2 py-1 rounded">
+                                                    Page {index + 1}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
                 </div>
             )}
 
@@ -213,12 +337,19 @@ export const Events: React.FC = () => {
                 {pastEvents.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {pastEvents.map((event) => (
-                            <div key={event.id} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-                                <span className="inline-block bg-gray-200 text-gray-600 px-2 py-1 rounded text-xs font-medium mb-3">
+                            <div
+                                key={event.id}
+                                className="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-all cursor-pointer group"
+                                onClick={() => setSelectedEvent(event)}
+                            >
+                                <span className="inline-block bg-gray-200 text-gray-600 px-2 py-1 rounded text-xs font-medium mb-3 group-hover:bg-navy-900 group-hover:text-white transition-colors">
                                     Completed
                                 </span>
-                                <h3 className="text-lg font-serif font-bold text-gray-700 mb-2">{event.title}</h3>
+                                <h3 className="text-lg font-serif font-bold text-gray-700 mb-2 group-hover:text-navy-900 transition-colors">{event.title}</h3>
                                 <p className="text-gray-500 text-sm">{event.dateRange}</p>
+                                <p className="text-bronze-500 text-xs mt-4 font-medium uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                                    View Details &rarr;
+                                </p>
                             </div>
                         ))}
                     </div>

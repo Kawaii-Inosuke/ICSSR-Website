@@ -13,6 +13,7 @@ export const Navbar: React.FC = () => {
     { name: 'Events', path: '/events' },
     { name: 'People', path: '/people' },
     { name: 'Opportunities', path: '/opportunities' },
+    { name: 'Gallery', path: '/gallery' },
   ];
 
   return (

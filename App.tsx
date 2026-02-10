@@ -9,6 +9,7 @@ import { Events } from './pages/Events';
 import { People } from './pages/People';
 import { Opportunities } from './pages/Opportunities';
 import { Contact } from './pages/Contact';
+import { Gallery } from './pages/Gallery';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/people" element={<People />} />
           <Route path="/opportunities" element={<Opportunities />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* Fallback route */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
